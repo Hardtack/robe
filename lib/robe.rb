@@ -6,7 +6,7 @@ module Robe
     attr_accessor :server
 
     def start(port = 0)
-      return if @server
+      return "robe on #{@server.port}" if @server
 
       @server = Server.new(Sash.new, port)
 
